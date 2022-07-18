@@ -18,7 +18,12 @@
   different expressions
   Like other languages though, it is Typed and uses 
   lower camel case for its methods, whcih can take parameters
-  Let's take user input as an example
+  Let's take the number 8 instead
+
+  Now to be clear, you have to be very explicit when using Dart
+  it will assume nothing and will follow everything to a T. 
+  Make sure to either print, return, or perform a task with whatever 
+  you are working on
 */
 
 void main() {
