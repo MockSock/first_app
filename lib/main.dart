@@ -2,11 +2,9 @@
 
 /*
   This is a basic for loop that would have an output 
-  Hello Number 1
-  Hello Number 2
-  Hello Number 3
-  Hello Number 4
-  Hello Number 5
+  Hello Number i or 8
+  until it gets to
+  Hello Number i*2 or 16
 
   This is all coming from the void main function, which 
   is special because it is the entry point of the app,
@@ -24,7 +22,8 @@
 */
 
 void main() {
-  displayNumbersToText();
+  // a value is passed to the parameter
+  displayNumbersToText(8);
 }
 
 displayNumbersToText(int i) {
