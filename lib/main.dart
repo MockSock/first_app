@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           title: Text("Hello World"),
         ),
         // This is your bread and butter area
-        // where other widgets are placed
+        // Note though, only one widget can be here
         body: Text("Hello World"),
       ),
     );
