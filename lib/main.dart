@@ -39,7 +39,14 @@ class MyApp extends StatelessWidget {
         ),
         // This is your bread and butter area
         // Note though, only one widget can be here
-        body: Container(),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(),
+            Row(),
+            Row(),
+          ],
+        ),
       ),
     );
   }
