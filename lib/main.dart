@@ -32,8 +32,10 @@ void main() {
 }
 
 // What happens if we make this a void method?
-// It can't return any value and then would
-// compiler errors
+// It can't return any value and
+// then that value can not be printed
+// or used unless it is changed to the
+// type that best fits the situation
 displayNumbersToText(int i) {
   //Change so that the input from the method will
   // then be in the for loop
