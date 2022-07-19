@@ -4,13 +4,17 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 // Now since everything is a widget, we need to create it
-// Widgets are a special type of class, which come in two flavors
+// Widgets are a special type of class, which come in Multiple flavors
 
-// Stateless, where nothing changes
-// EX: A logo or a static loading screen
+// Input/Output which is visible to the user
+// Ex: RaisedButton, Text
 
-// Stateful, where change occurs, may it be by the app or user
-// EX: A new user form that will be sent to the app or an animation
+// Layout/Control, which are the moving parts under the hood
+// These give structure so the other widgets can shine
+// Ex: Row, Column, ListView
+
+// Container() is a widget that belongs to both,
+// it can be stylized and can control what widgets are together
 
 // It does this by inheriting from the source code within flutter
 
@@ -35,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         // This is your bread and butter area
         // Note though, only one widget can be here
-        body: Text("Hello World"),
+        body: Container(),
       ),
     );
   }
