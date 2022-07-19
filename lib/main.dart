@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 void main() {}
 
@@ -11,4 +11,10 @@ void main() {}
 // Stateful, where change occurs, may it be by the app or user
 // EX: A new user form that will be sent to the app or an animation
 
-class MyApp extends StatelessWidget {}
+// It does this by inheriting from the source code within flutter
+
+class MyApp extends StatelessWidget {
+  // this is a method that will build
+  // your UI, using Widget as a type
+  Widget build(BuildContext context) {}
+}
