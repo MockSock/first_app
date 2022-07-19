@@ -25,8 +25,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // renders the app itself
     return MaterialApp(
-      // Creates the base design of the app
-      home: Scaffold(),
+      // Creates the base design of the app,
+      // which opens the door to other widgets
+      // that can be used to show something to
+      // the user
+      home: Scaffold(
+        // this is the top of the screen, and acts more like a
+        // shelf where you can put info
+        appBar: AppBar(
+          title: Text("Hello World"),
+        ),
+        // This is your bread and butter area
+        // where other widgets are placed
+        body: Text("Hello World"),
+      ),
     );
   }
 }
