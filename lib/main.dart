@@ -31,6 +31,9 @@ void main() {
   displayNumbersToText(8);
 }
 
+// What happens if we make this a void method?
+// It can't return any value and then would
+// compiler errors
 displayNumbersToText(int i) {
   //Change so that the input from the method will
   // then be in the for loop
