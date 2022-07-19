@@ -53,3 +53,7 @@ displayName(nameInput) {
   var name = nameInput;
   print(name);
 }
+
+
+// Finally, objects, which in an ideal world will be used the most 
+// since they are easy to reuse, and are closest to real world work
