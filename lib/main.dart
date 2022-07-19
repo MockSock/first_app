@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() {}
+void main() {
+  // a special method that runs the app in main()
+  runApp(MyApp());
+}
 
 // Now since everything is a widget, we need to create it
 // Widgets are a special type of class, which come in two flavors
@@ -16,5 +19,10 @@ void main() {}
 class MyApp extends StatelessWidget {
   // this is a method that will build
   // your UI, using Widget as a type
-  Widget build(BuildContext context) {}
+  Widget build(BuildContext context) {
+    // renders the app itself
+    return MaterialApp(
+      home: Text('Hello World!'),
+    );
+  }
 }
