@@ -60,6 +60,8 @@ displayName(nameInput) {
 class Human {
   // now this will act as a blueprint where the variables that would
   // clutter code will now be stored and be able to be called when needed
+
+  // within this, variables are noww called properties
   int age = 26;
   String name = 'Jamie';
 }
