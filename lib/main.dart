@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // renders the app itself
     return MaterialApp(
-      home: Text('Hello World!'),
+      // Creates the base design of the app
+      home: Scaffold(),
     );
   }
 }
