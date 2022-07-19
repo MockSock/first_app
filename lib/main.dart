@@ -48,10 +48,19 @@ class MyApp extends StatelessWidget {
         body: Column(
           // this turns it into a list of widgets
           children: [
-            Text("A question would go here!"),
-            ElevatedButton(child: Text('Answer 1'), onPressed: null),
-            ElevatedButton(child: Text('Answer 2'), onPressed: null),
-            ElevatedButton(child: Text('Answer 3'), onPressed: null),
+            const Text("A question would go here!"),
+            ElevatedButton(
+              child: Text('Answer 1'),
+              onPressed: answerQuestion(),
+            ),
+            ElevatedButton(
+              child: Text('Answer 2'),
+              onPressed: answerQuestion(),
+            ),
+            ElevatedButton(
+              child: Text('Answer 3'),
+              onPressed: answerQuestion(),
+            ),
           ],
         ),
       ),
@@ -62,7 +71,7 @@ class MyApp extends StatelessWidget {
   // make sure to always plan ahead on what a class does,
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
-  void answerQuestion() {
-    print('Duly Noted');
+  answerQuestion() {
+    return const Text('Duly Noted');
   }
 }
