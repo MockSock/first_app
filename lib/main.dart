@@ -57,4 +57,12 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  // I personally like methods on the bottom
+  // make sure to always plan ahead on what a class does,
+  // since classes need methods in them to stand alone.
+  // Always make sure that no method is outside its class
+  void answerQuestion() {
+    print('Duly Noted');
+  }
 }
