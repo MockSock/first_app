@@ -25,6 +25,12 @@ class MyApp extends StatelessWidget {
   // this is a method that will build
   // your UI, using Widget as a type
   Widget build(BuildContext context) {
+    var questions = [
+      // also valid 'What\'s your favorite color?'
+      "What's your favorite Color?",
+      "What's your favorite Animal?",
+    ];
+
     // renders the app itself
     return MaterialApp(
       // Creates the base design of the app,
@@ -40,11 +46,12 @@ class MyApp extends StatelessWidget {
         // This is your bread and butter area
         // Note though, only one widget can be here
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          // this turns it into a list of widgets
           children: [
-            Row(),
-            Row(),
-            Row(),
+            Text("A question would go here!"),
+            ElevatedButton(child: Text('Answer 1'), onPressed: null),
+            ElevatedButton(child: Text('Answer 2'), onPressed: null),
+            ElevatedButton(child: Text('Answer 3'), onPressed: null),
           ],
         ),
       ),
