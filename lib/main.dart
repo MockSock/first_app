@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  // a special method that runs the app in main()
-  runApp(MyApp());
-}
+// This just looks better to me
+void main() => runApp(MyApp());
 
 // Now since everything is a widget, we need to create it
 // Widgets are a special type of class, which come in two flavors
