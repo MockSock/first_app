@@ -17,6 +17,9 @@ void main() {
 // It does this by inheriting from the source code within flutter
 
 class MyApp extends StatelessWidget {
+  // This decorator just says we are overriding
+  // the build method under it
+  @override
   // this is a method that will build
   // your UI, using Widget as a type
   Widget build(BuildContext context) {
