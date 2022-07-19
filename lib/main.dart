@@ -29,6 +29,7 @@
 void main() {
   // a value is passed to the parameter
   displayNumbersToText(8);
+  displayName('Jamie');
 }
 
 // What happens if we make this a void method?
@@ -42,4 +43,13 @@ displayNumbersToText(int i) {
   for (i; i <= i * 2; i++) {
     print("Hello Number $i");
   }
+}
+
+// Let's go a bit more complex by using a variable
+
+displayName(nameInput) {
+  // both are valid, but the top one is preferred
+  // String name = nameInput;
+  var name = nameInput;
+  print(name);
 }
