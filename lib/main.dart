@@ -60,9 +60,19 @@ class _MyAppState extends State<MyApp> {
   // this is a method that will build
   // your UI, using Widget as a type
   Widget build(BuildContext context) {
+    // this var is very limited due to being a list,
+    // so let's change it to a map instead, which is
+    // a group of key-value pairs
     var questions = [
-      // also valid 'What\'s your favorite color?'
-      "What's your favorite Color?",
+      // this designates a map
+      {
+        'questionText': "What's your favorite Color?",
+        'answers': [
+          'Blue',
+          'Red',
+          'Green',
+        ],
+      },
       "What's your favorite Animal?",
     ];
 

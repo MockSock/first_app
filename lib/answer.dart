@@ -15,6 +15,7 @@ class Answer extends StatelessWidget {
           foregroundColor: MaterialStateProperty.all(Colors.white),
         ),
         onPressed: selectHandler,
+        // Let's use a map
         child: Text('Answer 1'),
       ),
     );
