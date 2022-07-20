@@ -23,13 +23,17 @@ class MyApp extends StatefulWidget {
   State<StatefulWidget> createState() {
     // make sure to return the state this is meant
     // for, this is the main connection
-    return MyAppState();
+
+    // an underscore will make the class private,
+    // protecting the code from tampering from
+    // other portions of the app
+    return _MyAppState();
   }
 }
 
 // Stateful widgets require their own class to keep track of
 // what is going on internally, which allows it to rebuild
-class MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
   // code to cycle through questions list
   // use var instead of int when using 0
   var questionIndex = 0;
