@@ -87,7 +87,14 @@ class _MyAppState extends State<MyApp> {
               // now this property is tracking progress
               questions[_questionIndex],
             ),
-            Answer(),
+            // Now the MyApp widget is in a "lifted state"
+            // where it is the commmon denominator between
+            // multiple widgets, which means even though it
+            // is private, since the other widgets are children
+            // to this widget, we can pass pointers and variables
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),
