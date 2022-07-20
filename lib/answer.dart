@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
-  final Function selectHandler;
+  final VoidCallback selectHandler;
 
   Answer(this.selectHandler);
 
@@ -14,7 +14,7 @@ class Answer extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(Colors.purple),
           foregroundColor: MaterialStateProperty.all(Colors.white),
         ),
-        onPressed: null,
+        onPressed: selectHandler,
         child: Text('Answer 1'),
       ),
     );
