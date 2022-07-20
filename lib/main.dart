@@ -48,7 +48,11 @@ class MyApp extends StatelessWidget {
         body: Column(
           // this turns it into a list of widgets
           children: [
-            const Text("A question would go here!"),
+            Text(
+              // this is prefered over questions[0] due to the options
+              // the flutter framework gives for using a list
+              questions.elementAt(0),
+            ),
             ElevatedButton(
               // dont put parenthesis here, it will auto call the method
               // we are setting a pointer here so when it is pressed
