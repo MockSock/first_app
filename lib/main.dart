@@ -92,7 +92,11 @@ class MyAppState extends State<MyApp> {
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
   void answerQuestion() {
-    questionIndex = questionIndex + 1;
+    // this method is what actually changes the state
+    // set what will actually change within the class
+    setState(() {
+      questionIndex = questionIndex + 1;
+    });
     print(questionIndex);
   }
 }
