@@ -87,22 +87,7 @@ class _MyAppState extends State<MyApp> {
               // now this property is tracking progress
               questions[_questionIndex],
             ),
-            ElevatedButton(
-              // dont put parenthesis here, it will auto call the method
-              // we are setting a pointer here so when it is pressed
-              // the code is called then
-              onPressed: _answerQuestion,
-              // Flutter convention has this last
-              child: Text('Answer 1'),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: Text('Answer 1'),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: Text('Answer 1'),
-            ),
+            Answer(),
           ],
         ),
       ),
