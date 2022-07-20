@@ -31,6 +31,8 @@ class MyApp extends StatelessWidget {
       "What's your favorite Animal?",
     ];
 
+    // code to cycle through questions list
+
     // renders the app itself
     return MaterialApp(
       // Creates the base design of the app,
@@ -49,8 +51,9 @@ class MyApp extends StatelessWidget {
           // this turns it into a list of widgets
           children: [
             Text(
-              // this is prefered over questions[0] due to the options
-              // the flutter framework gives for using a list
+              // this could be prefered over questions[0] due to the options
+              // the flutter framework gives for using a list, but for what
+              // it is doing, these expressions are interchangeable
               questions.elementAt(0),
             ),
             ElevatedButton(
