@@ -77,6 +77,6 @@ class MyApp extends StatelessWidget {
   // Always make sure that no method is outside its class
   void answerQuestion() {
     // making it a const and a Text follows convention better
-    const Text('Duly Noted');
+    print('Duly Noted');
   }
 }
