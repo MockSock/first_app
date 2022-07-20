@@ -51,15 +51,18 @@ class MyApp extends StatelessWidget {
             const Text("A question would go here!"),
             ElevatedButton(
               child: Text('Answer 1'),
-              onPressed: answerQuestion(),
+              // dont put parenthesis here, it will auto call the method
+              // we are setting a pointer here so when it is pressed
+              // the code is called then
+              onPressed: answerQuestion,
             ),
             ElevatedButton(
               child: Text('Answer 2'),
-              onPressed: answerQuestion(),
+              onPressed: answerQuestion,
             ),
             ElevatedButton(
               child: Text('Answer 3'),
-              onPressed: answerQuestion(),
+              onPressed: answerQuestion,
             ),
           ],
         ),
@@ -71,7 +74,7 @@ class MyApp extends StatelessWidget {
   // make sure to always plan ahead on what a class does,
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
-  answerQuestion() {
-    return const Text('Duly Noted');
+  void answerQuestion() {
+    print('Duly Noted');
   }
 }
