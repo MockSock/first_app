@@ -18,7 +18,7 @@ void main() => runApp(MyApp());
 
 // It does this by inheriting from the source code within flutter
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // code to cycle through questions list
   // use var instead of int when using 0
   var questionIndex = 0;
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
         // this is the top of the screen, and acts more like a
         // shelf where you can put info
         appBar: AppBar(
-          title: const Text("Hello World"),
+          title: Text("Hello World"),
         ),
         // This is your bread and butter area
         // Note though, only one widget can be here
@@ -60,15 +60,15 @@ class MyApp extends StatelessWidget {
               // the code is called then
               onPressed: answerQuestion,
               // Flutter convention has this last
-              child: const Text('Answer 1'),
+              child: Text('Answer 1'),
             ),
             ElevatedButton(
               onPressed: answerQuestion,
-              child: const Text('Answer 1'),
+              child: Text('Answer 1'),
             ),
             ElevatedButton(
               onPressed: answerQuestion,
-              child: const Text('Answer 1'),
+              child: Text('Answer 1'),
             ),
           ],
         ),
