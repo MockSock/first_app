@@ -73,6 +73,10 @@ class _MyAppState extends State<MyApp> {
         "questionText": "What's your favorite Animal?",
         'answers': ['Tiger', 'Raven', 'Horse', 'Wolf'],
       },
+      {
+        "questionText": "What's your favorite hobby?",
+        'answers': ['Painting', 'Music', 'Cooking', 'Gardening'],
+      },
     ];
 
     // renders the app itself
