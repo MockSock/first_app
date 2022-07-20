@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         // this is the top of the screen, and acts more like a
         // shelf where you can put info
         appBar: AppBar(
-          title: Text("Hello World"),
+          title: const Text("Hello World"),
         ),
         // This is your bread and butter area
         // Note though, only one widget can be here
@@ -50,19 +50,20 @@ class MyApp extends StatelessWidget {
           children: [
             const Text("A question would go here!"),
             ElevatedButton(
-              child: Text('Answer 1'),
               // dont put parenthesis here, it will auto call the method
               // we are setting a pointer here so when it is pressed
               // the code is called then
               onPressed: answerQuestion,
+              // Flutter convention has this last
+              child: const Text('Answer 1'),
             ),
             ElevatedButton(
-              child: Text('Answer 2'),
               onPressed: answerQuestion,
+              child: const Text('Answer 1'),
             ),
             ElevatedButton(
-              child: Text('Answer 3'),
               onPressed: answerQuestion,
+              child: const Text('Answer 1'),
             ),
           ],
         ),
@@ -75,6 +76,7 @@ class MyApp extends StatelessWidget {
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
   void answerQuestion() {
-    print('Duly Noted');
+    // making it a const and a Text follows convention better
+    const Text('Duly Noted');
   }
 }
