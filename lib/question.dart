@@ -14,6 +14,8 @@ class Question extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // Uses full width of the device to center the screen
+      width: double.infinity,
       child: Text(
         questionText,
         style: TextStyle(fontSize: 28),
