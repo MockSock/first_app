@@ -67,13 +67,12 @@ class _MyAppState extends State<MyApp> {
       // this designates a map
       {
         'questionText': "What's your favorite Color?",
-        'answers': [
-          'Blue',
-          'Red',
-          'Green',
-        ],
+        'answers': ['Blue', 'Red', 'Green'],
       },
-      "What's your favorite Animal?",
+      {
+        "questionText": "What's your favorite Animal?",
+        'answers': ['Tiger', 'Raven', 'Horse', 'Wolf'],
+      },
     ];
 
     // renders the app itself
