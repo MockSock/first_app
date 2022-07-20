@@ -94,6 +94,7 @@ class MyAppState extends State<MyApp> {
   void answerQuestion() {
     // this method is what actually changes the state
     // set what will actually change within the class
+    // in essence, it calls for a re-render of the widget
     setState(() {
       questionIndex = questionIndex + 1;
     });
