@@ -16,6 +16,7 @@ class Question extends StatelessWidget {
     return Container(
       // Uses full width of the device to center the screen
       width: double.infinity,
+      margin: EdgeInsets.all(10),
       child: Text(
         questionText,
         style: TextStyle(fontSize: 28),
