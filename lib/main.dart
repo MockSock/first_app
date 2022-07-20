@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
   // make sure to always plan ahead on what a class does,
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
-  void answerQuestion() {
+  void _answerQuestion() {
     // this method is what actually changes the state
     // set what will actually change within the class
     // in essence, it calls for a re-render of the widget
@@ -88,16 +88,16 @@ class _MyAppState extends State<MyApp> {
               // dont put parenthesis here, it will auto call the method
               // we are setting a pointer here so when it is pressed
               // the code is called then
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               // Flutter convention has this last
               child: Text('Answer 1'),
             ),
             ElevatedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('Answer 1'),
             ),
             ElevatedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('Answer 1'),
             ),
           ],
