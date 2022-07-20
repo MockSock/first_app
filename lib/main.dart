@@ -19,8 +19,10 @@ void main() => runApp(MyApp());
 // It does this by inheriting from the source code within flutter
 
 class MyApp extends StatelessWidget {
-  // This decorator just says we are overriding
-  // the build method under it
+  // code to cycle through questions list
+  // use var instead of int when using 0
+  var questionIndex = 0;
+
   @override
   // this is a method that will build
   // your UI, using Widget as a type
@@ -30,8 +32,6 @@ class MyApp extends StatelessWidget {
       "What's your favorite Color?",
       "What's your favorite Animal?",
     ];
-
-    // code to cycle through questions list
 
     // renders the app itself
     return MaterialApp(
