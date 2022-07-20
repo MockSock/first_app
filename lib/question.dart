@@ -4,7 +4,9 @@
 import 'package:flutter/material.dart';
 
 class Question extends StatelessWidget {
-  String questionText;
+  // final shows that it wont change within its
+  // parent class, but it can still change externally
+  final String questionText;
 
   // this is the constructor
   Question(this.questionText);
