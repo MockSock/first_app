@@ -98,7 +98,7 @@ class _MyAppState extends State<MyApp> {
           children: [
             Question(
               // now this property is tracking progress
-              questions[_questionIndex],
+              questions[_questionIndex]['questionText'].toString(),
             ),
             // Now the MyApp widget is in a "lifted state"
             // where it is the commmon denominator between
