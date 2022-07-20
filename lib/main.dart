@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'question.dart';
+
+import './question.dart';
 
 // This just looks better to me
 void main() => runApp(MyApp());
@@ -81,7 +82,7 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           // this turns it into a list of widgets
           children: [
-            Text(
+            Question(
               // now this property is tracking progress
               questions[_questionIndex],
             ),
