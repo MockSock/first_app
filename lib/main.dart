@@ -91,10 +91,6 @@ class _MyAppState extends State<MyApp> {
               // we are setting a pointer here so when it is pressed
               // the code is called then
               onPressed: _answerQuestion,
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.purple),
-                foregroundColor: MaterialStateProperty.all(Colors.white),
-              ),
               // Flutter convention has this last
               child: Text('Answer 1'),
             ),
