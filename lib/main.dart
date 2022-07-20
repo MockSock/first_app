@@ -34,6 +34,19 @@ class MyAppState extends State<MyApp> {
   // use var instead of int when using 0
   var questionIndex = 0;
 
+  // make sure to always plan ahead on what a class does,
+  // since classes need methods in them to stand alone.
+  // Always make sure that no method is outside its class
+  void answerQuestion() {
+    // this method is what actually changes the state
+    // set what will actually change within the class
+    // in essence, it calls for a re-render of the widget
+    setState(() {
+      questionIndex = questionIndex + 1;
+    });
+    print(questionIndex);
+  }
+
   @override
   // this is a method that will build
   // your UI, using Widget as a type
@@ -85,19 +98,5 @@ class MyAppState extends State<MyApp> {
         ),
       ),
     );
-  }
-
-  // I personally like methods on the bottom
-  // make sure to always plan ahead on what a class does,
-  // since classes need methods in them to stand alone.
-  // Always make sure that no method is outside its class
-  void answerQuestion() {
-    // this method is what actually changes the state
-    // set what will actually change within the class
-    // in essence, it calls for a re-render of the widget
-    setState(() {
-      questionIndex = questionIndex + 1;
-    });
-    print(questionIndex);
   }
 }
