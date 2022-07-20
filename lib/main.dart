@@ -105,9 +105,14 @@ class _MyAppState extends State<MyApp> {
             // multiple widgets, which means even though it
             // is private, since the other widgets are children
             // to this widget, we can pass pointers and variables
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
+
+            // this ... pulls all the values of a list and the rest of this code
+            // uses a blend of everything to pull it all together and pass it
+            // through. TBH should study it more
+            ...(questions[_questionIndex]['answers'] as List<String>)
+                .map((answer) {
+              return Answer(_answerQuestion, answer);
+            }).toList()
           ],
         ),
       ),
