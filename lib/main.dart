@@ -82,5 +82,6 @@ class MyApp extends StatelessWidget {
   // Always make sure that no method is outside its class
   void answerQuestion() {
     questionIndex = questionIndex + 1;
+    print(questionIndex);
   }
 }
