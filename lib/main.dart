@@ -19,6 +19,17 @@ void main() => runApp(MyApp());
 // It does this by inheriting from the source code within flutter
 
 class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // make sure to return the state this is meant
+    // for, this is the main connection
+    return MyAppState();
+  }
+}
+
+// Stateful widgets require their own class to keep track of
+// what is going on internally, which allows it to rebuild
+class MyAppState extends State<MyApp> {
   // code to cycle through questions list
   // use var instead of int when using 0
   var questionIndex = 0;
