@@ -36,7 +36,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   // code to cycle through questions list
   // use var instead of int when using 0
-  var questionIndex = 0;
+  // When the class is private, you usually wanna
+  // make the variables within it private as well
+  var _questionIndex = 0;
 
   // make sure to always plan ahead on what a class does,
   // since classes need methods in them to stand alone.
@@ -46,9 +48,9 @@ class _MyAppState extends State<MyApp> {
     // set what will actually change within the class
     // in essence, it calls for a re-render of the widget
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   @override
@@ -80,7 +82,7 @@ class _MyAppState extends State<MyApp> {
           children: [
             Text(
               // now this property is tracking progress
-              questions[questionIndex],
+              questions[_questionIndex],
             ),
             ElevatedButton(
               // dont put parenthesis here, it will auto call the method
