@@ -51,10 +51,8 @@ class MyApp extends StatelessWidget {
           // this turns it into a list of widgets
           children: [
             Text(
-              // this could be prefered over questions[0] due to the options
-              // the flutter framework gives for using a list, but for what
-              // it is doing, these expressions are interchangeable
-              questions.elementAt(0),
+              // now this property is tracking progress
+              questions[questionIndex],
             ),
             ElevatedButton(
               // dont put parenthesis here, it will auto call the method
@@ -83,7 +81,6 @@ class MyApp extends StatelessWidget {
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
   void answerQuestion() {
-    // making it a const and a Text follows convention better
-    print('Duly Noted');
+    questionIndex = questionIndex + 1;
   }
 }
