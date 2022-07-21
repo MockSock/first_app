@@ -43,13 +43,34 @@ class _MyAppState extends State<MyApp> {
   // make the variables within it private as well
   var _questionIndex = 0;
 
+  // final means the value will never change
+  // unless it is rebuilt and a new value is initialized
+
+  // const means that the value is constant, but multiple calls
+  // can return different values from the same variable. This
+  // list is proof. It can't be used on the class level without
+  // the static keyword, but final and const together can be better
+  final questions = const [
+    // this designates a map
+    {
+      'questionText': "What's your favorite Color?",
+      'answers': ['Blue', 'Red', 'Green'],
+    },
+    {
+      "questionText": "What's your favorite Animal?",
+      'answers': ['Tiger', 'Raven', 'Horse', 'Wolf'],
+    },
+    {
+      "questionText": "What's your favorite hobby?",
+      'answers': ['Painting', 'Music', 'Cooking', 'Gardening'],
+    },
+  ];
+
   // make sure to always plan ahead on what a class does,
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
   void _answerQuestion() {
-    // this method is what actually changes the state
-    // set what will actually change within the class
-    // in essence, it calls for a re-render of the widget
+    if (_questionIndex < questions.length) {}
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
@@ -60,34 +81,7 @@ class _MyAppState extends State<MyApp> {
   // this is a method that will build
   // your UI, using Widget as a type
   Widget build(BuildContext context) {
-    // final means the value will never change
-    // unless it is rebuilt and a new value is initialized
-
-    // const means that the value is constant, but multiple calls
-    // can return different values from the same variable. This
-    // list is proof
-    const questions = [
-      // this designates a map
-      {
-        'questionText': "What's your favorite Color?",
-        'answers': ['Blue', 'Red', 'Green'],
-      },
-      {
-        "questionText": "What's your favorite Animal?",
-        'answers': ['Tiger', 'Raven', 'Horse', 'Wolf'],
-      },
-      {
-        "questionText": "What's your favorite hobby?",
-        'answers': ['Painting', 'Music', 'Cooking', 'Gardening'],
-      },
-    ];
-
-    // renders the app itself
     return MaterialApp(
-      // Creates the base design of the app,
-      // which opens the door to other widgets
-      // that can be used to show something to
-      // the user
       home: Scaffold(
         // this is the top of the screen, and acts more like a
         // shelf where you can put info
