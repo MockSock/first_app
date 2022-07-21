@@ -62,7 +62,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     // final means the value will never change
     // unless it is rebuilt and a new value is initialized
-    final questions = [
+
+    // const means that the value is constant, but multiple calls
+    // can return different values from the same variable. This
+    // list is proof
+    const questions = [
       // this designates a map
       {
         'questionText': "What's your favorite Color?",
