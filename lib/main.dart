@@ -1,7 +1,7 @@
+import 'package:first_app/quiz.dart';
 import 'package:flutter/material.dart';
 
-import './question.dart';
-import './answer.dart';
+import './quiz.dart';
 
 // This just looks better to me
 void main() => runApp(MyApp());
@@ -37,7 +37,7 @@ class MyApp extends StatefulWidget {
 // Stateful widgets require their own class to keep track of
 // what is going on internally, which allows it to rebuild
 class _MyAppState extends State<MyApp> {
-  // code to cycle through questions list
+  // code to cycle through _questions list
   // use var instead of int when using 0
   // When the class is private, you usually wanna
   // make the variables within it private as well
@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
   // can return different values from the same variable. This
   // list is proof. It can't be used on the class level without
   // the static keyword, but final and const together can be better
-  final questions = const [
+  final _questions = const [
     // this designates a map
     {
       'questionText': "What's your favorite Color?",
@@ -74,8 +74,8 @@ class _MyAppState extends State<MyApp> {
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
-    if (_questionIndex < questions.length) {
-      print('We have more questions');
+    if (_questionIndex < _questions.length) {
+      print('We have more _questions');
     }
   }
 
@@ -93,30 +93,10 @@ class _MyAppState extends State<MyApp> {
         // This is your bread and butter area
         // Note though, only one widget can be here
         // this is a basic if statement now
-        body: _questionIndex < questions.length
-            // shows success or true
-            ? Column(
-                // this turns it into a list of widgets
-                children: [
-                  Question(
-                    // now this property is tracking progress via a string value
-                    questions[_questionIndex]['questionText'] as String,
-                  ),
-                  // Now the MyApp widget is in a "lifted state"
-                  // where it is the commmon denominator between
-                  // multiple widgets, which means even though it
-                  // is private, since the other widgets are children
-                  // to this widget, we can pass pointers and variables
-
-                  // this ... pulls all the values of a list and the rest of this code
-                  // uses a blend of everything to pull it all together and pass it
-                  // through. TBH should study it more
-                  ...(questions[_questionIndex]['answers'] as List<String>)
-                      .map((answer) {
-                    return Answer(_answerQuestion, answer);
-                  }).toList()
-                ],
-              )
+        body: _questionIndex < _questions.length
+            // Now we pass the functions from the parent
+            // to the child in order for it to be done
+            ? Quiz(_answerQuestion, _questions)
             // This is the else portion
             : Center(
                 child: Text('You did it!'),
