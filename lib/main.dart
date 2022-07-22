@@ -1,7 +1,7 @@
-import 'package:first_app/quiz.dart';
 import 'package:flutter/material.dart';
 
 import './quiz.dart';
+import './result.dart';
 
 // This just looks better to me
 void main() => runApp(MyApp());
@@ -105,9 +105,7 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
               )
             // This is the else portion
-            : Center(
-                child: Text('You did it!'),
-              ),
+            : Result(),
       ),
     );
   }
