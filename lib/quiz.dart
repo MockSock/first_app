@@ -6,7 +6,8 @@ import './answer.dart';
 class Quiz extends StatelessWidget {
 
   final List<Map<String, Object>> questions;
-  Quiz(this.questions)
+  final Function answer;
+  Quiz(this.questions, this.answer)
 
   @override
   Widget build(BuildContext context) {
