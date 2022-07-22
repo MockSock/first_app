@@ -70,11 +70,13 @@ class _MyAppState extends State<MyApp> {
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
   void _answerQuestion() {
-    if (_questionIndex < questions.length) {}
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
+    if (_questionIndex < questions.length) {
+      print('We have more questions');
+    }
   }
 
   @override
@@ -90,28 +92,35 @@ class _MyAppState extends State<MyApp> {
         ),
         // This is your bread and butter area
         // Note though, only one widget can be here
-        body: Column(
-          // this turns it into a list of widgets
-          children: [
-            Question(
-              // now this property is tracking progress
-              questions[_questionIndex]['questionText'].toString(),
-            ),
-            // Now the MyApp widget is in a "lifted state"
-            // where it is the commmon denominator between
-            // multiple widgets, which means even though it
-            // is private, since the other widgets are children
-            // to this widget, we can pass pointers and variables
+        // this is a basic if statement now
+        body: _questionIndex < questions.length
+            // shows success or true
+            ? Column(
+                // this turns it into a list of widgets
+                children: [
+                  Question(
+                    // now this property is tracking progress
+                    questions[_questionIndex]['questionText'].toString(),
+                  ),
+                  // Now the MyApp widget is in a "lifted state"
+                  // where it is the commmon denominator between
+                  // multiple widgets, which means even though it
+                  // is private, since the other widgets are children
+                  // to this widget, we can pass pointers and variables
 
-            // this ... pulls all the values of a list and the rest of this code
-            // uses a blend of everything to pull it all together and pass it
-            // through. TBH should study it more
-            ...(questions[_questionIndex]['answers'] as List<String>)
-                .map((answer) {
-              return Answer(_answerQuestion, answer);
-            }).toList()
-          ],
-        ),
+                  // this ... pulls all the values of a list and the rest of this code
+                  // uses a blend of everything to pull it all together and pass it
+                  // through. TBH should study it more
+                  ...(questions[_questionIndex]['answers'] as List<String>)
+                      .map((answer) {
+                    return Answer(_answerQuestion, answer);
+                  }).toList()
+                ],
+              )
+            // This is the else portion
+            : Center(
+                child: Text('You did it!'),
+              ),
       ),
     );
   }
