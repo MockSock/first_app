@@ -96,7 +96,7 @@ class _MyAppState extends State<MyApp> {
         body: _questionIndex < _questions.length
             // Now we pass the functions from the parent
             // to the child in order for it to be done
-            ? Quiz(_answerQuestion, _questions)
+            ? Quiz(_questions, _answerQuestion, _questionIndex)
             // This is the else portion
             : Center(
                 child: Text('You did it!'),
