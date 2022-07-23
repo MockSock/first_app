@@ -108,6 +108,7 @@ class _MyAppState extends State<MyApp> {
         // this is the top of the screen, and acts more like a
         // shelf where you can put info
         appBar: AppBar(
+          backgroundColor: Colors.purple,
           title: Text("Hello World"),
         ),
         // This is your bread and butter area

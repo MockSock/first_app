@@ -34,6 +34,10 @@ class Result extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.purple),
+              foregroundColor: MaterialStateProperty.all(Colors.amber),
+            ),
             onPressed: resetQuiz,
             child: const Text('Restart Quiz'),
           ),
