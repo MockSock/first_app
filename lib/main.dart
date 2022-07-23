@@ -41,6 +41,7 @@ class _MyAppState extends State<MyApp> {
   // When the class is private, you usually wanna
   // make the variables within it private as well
   var _questionIndex = 0;
+  var _totalScore = 0;
 
   // final means the value will never change
   // unless it is rebuilt and a new value is initialized
@@ -84,14 +85,11 @@ class _MyAppState extends State<MyApp> {
   // make sure to always plan ahead on what a class does,
   // since classes need methods in them to stand alone.
   // Always make sure that no method is outside its class
-  void _answerQuestion() {
+  void _answerQuestion(int score) {
+    _totalScore += score;
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
-    print(_questionIndex);
-    if (_questionIndex < _questions.length) {
-      print('We have more _questions');
-    }
   }
 
   @override
