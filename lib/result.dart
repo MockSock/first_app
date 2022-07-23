@@ -8,7 +8,14 @@ class Result extends StatelessWidget {
   // Let's make a getter, which is a mix
   // between a method and a property
   String get resultPhrase {
-    var resultText = 'You did it!';
+    String resultText;
+    if (resultScore <= 8) {
+      resultText = 'You are just like the developer!';
+    } else if (resultScore <= 12) {
+      resultText = 'You seem like a cool person!';
+    } else {
+      resultText = 'We wouldn\'t talk much, you are strange.';
+    }
     return resultText;
   }
 
@@ -17,7 +24,7 @@ class Result extends StatelessWidget {
     return Center(
       child: Text(
         resultPhrase,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 36,
           fontWeight: FontWeight.bold,
         ),
