@@ -118,7 +118,7 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
               )
             // This is the else portion
-            : Result(),
+            : Result(_totalScore),
       ),
     );
   }
