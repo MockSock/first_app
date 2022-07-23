@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
+  final VoidCallback resetQuiz;
 
-  Result(this.resultScore);
+  Result(this.resultScore, this.resetQuiz);
 
   // Let's make a getter, which is a mix
   // between a method and a property
@@ -31,6 +32,10 @@ class Result extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
+          ),
+          ElevatedButton(
+            onPressed: resetQuiz,
+            child: const Text('Restart Quiz'),
           ),
         ],
       ),

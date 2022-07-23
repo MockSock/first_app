@@ -43,6 +43,13 @@ class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
   var _totalScore = 0;
 
+  void _resetQuiz() {
+    setState(() {
+      _questionIndex = 0;
+      _totalScore = 0;
+    });
+  }
+
   // final means the value will never change
   // unless it is rebuilt and a new value is initialized
 
@@ -118,7 +125,7 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
               )
             // This is the else portion
-            : Result(_totalScore),
+            : Result(_totalScore, _resetQuiz),
       ),
     );
   }
