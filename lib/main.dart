@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import './quiz.dart';
 import './result.dart';
 
-// This just looks better to me
 void main() => runApp(MyApp());
 
 // Now since everything is a widget, we need to create it
@@ -51,18 +50,34 @@ class _MyAppState extends State<MyApp> {
   // list is proof. It can't be used on the class level without
   // the static keyword, but final and const together can be better
   final _questions = const [
-    // this designates a map
+    // this designates a map, which can have maps within it
+    // let's give scores to everything so we can make a result
+    // Score like golf, lower = better
     {
       'questionText': "What's your favorite Color?",
-      'answers': ['Blue', 'Red', 'Green'],
+      'answers': [
+        {'text': 'Blue', 'score': 1},
+        {'text': 'Red', 'score': 5},
+        {'text': 'Green', 'score': 8},
+      ],
     },
     {
       "questionText": "What's your favorite Animal?",
-      'answers': ['Tiger', 'Raven', 'Horse', 'Wolf'],
+      'answers': [
+        {'text': 'Tiger', 'score': 1},
+        {'text': 'Raven', 'score': 4},
+        {'text': 'Horse', 'score': 6},
+        {'text': 'Wolf', 'score': 10},
+      ],
     },
     {
       "questionText": "What's your favorite hobby?",
-      'answers': ['Painting', 'Music', 'Cooking', 'Gardening'],
+      'answers': [
+        {'text': 'Painting', 'score': 1},
+        {'text': 'Music', 'score': 3},
+        {'text': 'Cooking', 'score': 3},
+        {'text': 'Gardening', 'score': 5},
+      ],
     },
   ];
 
